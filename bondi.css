@@ -1,0 +1,182 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --primary: #33d1cc;
+  --danger: #ff3150;
+  --warning: #ffc400;
+}
+.landing {
+  width: 100%;
+  height: 100vh;
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+.nav-link {
+  color: white;
+}
+.active {
+  color: var(--primary) !important;
+}
+.header-p {
+  position: relative;
+  width: fit-content;
+}
+.header-p::after {
+  content: "";
+  width: 50%;
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--primary);
+}
+.icons {
+  position: relative;
+}
+.service-number {
+  font-size: 12rem;
+}
+.service-icon {
+  font-size: 4rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.page-item.disabled {
+  background-color: var(--danger);
+  color: white;
+  border-radius: 20px;
+}
+.page-item.disabled > a {
+  color: var(--warning) !important;
+}
+.work {
+  cursor: pointer;
+}
+.work .card {
+  position: relative;
+  overflow: hidden;
+}
+.work .card::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary);
+  opacity: 0.8;
+  left: -100%;
+  top: 0;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.work .card::before {
+  content: "APPLICATION";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -100%;
+  top: 0;
+  transition: 0.3s;
+  font-size: 20px;
+  z-index: 10;
+  color: white;
+  font-weight: bold;
+}
+.work .card:hover::after {
+  left: 0;
+}
+.work .card:hover::before {
+  left: 0;
+}
+.portfolio .page-link:focus {
+  box-shadow: none;
+}
+.stuff-p {
+  width: 500px;
+}
+@media (max-width: 567px) {
+  .stuff-p {
+    width: 100%;
+  }
+}
+.team-p {
+  width: 80%;
+  margin: 0 auto;
+}
+@media (max-width: 567px) {
+  .team-p {
+    width: 100%;
+  }
+}
+nav .search-icon {
+  cursor: pointer;
+}
+nav .search-icon:hover {
+}
+nav .search-input {
+  width: 200px;
+  border: none;
+  border-bottom: 2px solid var(--primary);
+  padding: 3px 5px;
+  color: white;
+}
+
+nav .s {
+  width: 0;
+  overflow: hidden;
+  transition: 0.5s;
+}
+nav form {
+  position: relative;
+}
+nav form::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 90%;
+  background-color: var(--primary);
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .search-input:focus {
+  border: none;
+  border-bottom: 2px solid var(--primary);
+  outline: none;
+}
+nav .search-input::placeholder {
+  color: white;
+}
+.subscribe .email {
+  flex: 1;
+  border: none;
+  border-bottom: 2px solid white;
+}
+@media (max-width: 768px) {
+  .subscribe .email {
+    width: 100%;
+  }
+}
+.subscribe .email:focus {
+  border: none;
+  border-bottom: 2px solid white;
+  outline: none;
+}
+.subscribe .email::placeholder {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+.footere-btn {
+  width: 100%;
+}
